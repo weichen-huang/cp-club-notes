@@ -1,5 +1,6 @@
 ## Setup Python
 - Python download: https://www.python.org/downloads/
+- Alternatively: Online IDE for python https://replit.com/
 - Python tutorial (to get familiar with syntax): https://www.youtube.com/watch?v=kqtD5dpn9C8
 
 ## Time complexity:
@@ -143,3 +144,26 @@ We can repeat this operation:
 ```
 
 Notice that at each iteration, the number of elements we have to search for is divided by 2. Therefore we have $2^x = n$ where the number of operations = x. Thus the time complexity is $O(log_{2}(n)) = O(log(n))$
+
+```
+a = [1, 3, 4, 5]
+x = 9
+n = len(a)
+
+left = 0
+right = n-1
+
+  
+
+while left < right:
+	mid = (left + right) // 2 # // means floor division
+	if a[mid] == x:
+		print(mid)	
+		break
+	
+	elif a[mid] > x:
+		right = mid
+	
+	else:
+		left = mid + 1
+```
